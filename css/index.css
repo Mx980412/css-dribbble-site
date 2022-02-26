@@ -1,0 +1,276 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* common.css */
+body {
+  font: 16px/1.5 Arial;
+  color: #111;
+}
+a {
+  text-decoration: none;
+  color: #6e6d7a;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+.button {
+  background-color: #ea4c89;
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* page css */
+
+header {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+header .layout {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+}
+.nav {
+  display: flex;
+  margin-left: 16px;
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 16px;
+}
+
+header .extra {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: auto;
+}
+header .extra a {
+  margin-left: 10px;
+}
+
+.intro {
+  background-color: #f8f6fd;
+}
+
+.intro .layout {
+  display: flex;
+  align-items: center;
+  height: 480px;
+}
+.intro h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+.intro p {
+  margin-top: 20px;
+}
+.intro .button {
+  margin-top: 20px;
+}
+.intro img {
+  width: 500px;
+}
+
+.area-filter {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.area-filter .select {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.area-filter .cate {
+  position: relative;
+}
+
+.area-filter .cate:hover .popup {
+  display: block;
+}
+
+.area-filter .select .iconfont {
+  margin-left: 4px;
+  font-size: 12px;
+  color: #888;
+}
+
+.area-filter .popup {
+  border: 1px solid rgba(0, 0, 0, 0.473);
+  border-radius: 6px;
+  position: absolute;
+  top: 50px;
+  width: 160px;
+  background: #fff;
+  display: none;
+  z-index: 1;
+}
+
+.area-filter .popup li {
+  padding: 10px;
+  color: #999;
+}
+
+.area-filter .popup li.active {
+  font-weight: bold;
+  color: #ea4c89;
+}
+
+.area-filter .popup li.line {
+  border-top: 1px solid rgba(0, 0, 0, 0.473);
+}
+
+.area-filter .labels {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.area-filter .labels li {
+  color: #888;
+  margin: 0 10px;
+}
+
+.area-filter .labels li.active {
+  background: #f3f3f4;
+  padding: 10px;
+  border-radius: 6px;
+}
+.area-filter .button-simple {
+  margin-left: auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cards > li {
+  width: calc(33.33% - 24px);
+  height: 310px;
+  margin-top: 30px;
+}
+
+.cards .card {
+  position: relative;
+  height: 270px;
+}
+.cards .labels {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.cards .card:hover .labels {
+  display: none;
+}
+
+.cards .labels .iconfont {
+  color: #fff;
+  font-size: 20px;
+}
+
+.cards .title {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 10px 10px 10px;
+  background: linear-gradient(
+    to top,
+    rgba(180, 180, 180, 0.8) 40%,
+    rgba(255, 255, 255, 0.2)
+  );
+  /* box-sizing: inset 0 8px 20px rgba(255, 255, 255, 0.8); */
+  opacity: 0;
+  transition: opacity 1s;
+}
+.cards .card:hover .title {
+  opacity: 1;
+}
+
+.cards .title .text {
+  color: #fff;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cards .icons {
+  width: 200px;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.cards .title .iconfont {
+  background: #ddd;
+  color: #666;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+.cards .card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cards .info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cards .user {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.cards .user .avatar {
+  border-radius: 50%;
+}
+.cards .username {
+  margin-left: 6px;
+}
+.card .user .label {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
+  color: #fff;
+  background: #aaa;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+.cards .actions {
+  width: 120px;
+  text-align: center;
+}
